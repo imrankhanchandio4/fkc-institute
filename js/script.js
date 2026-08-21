@@ -1,4 +1,4 @@
-/* FKC Institute of Computer - Main JavaScript */
+/* IKC Institute of Computer - Main JavaScript */
 
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu toggle
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Build WhatsApp message
       const text = encodeURIComponent(
-        `*New Admission Application - FKC Institute*%0A%0A` +
+        `*New Admission Application - IKC Institute*%0A%0A` +
         `*Student Name:* ${name}%0A` +
         `*Father Name:* ${father}%0A` +
         `*Contact:* ${contact}%0A` +
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
       );
 
       // Open WhatsApp with pre-filled form data
-      window.open(`https://wa.me/923313498008?text=${text}`, '_blank');
+      window.open(`https://wa.me/923362506588?text=${text}`, '_blank');
 
       // Show success message
       const successMsg = document.getElementById('formSuccess');
@@ -118,13 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = formData.get('message') || '';
 
       const text = encodeURIComponent(
-        `*New Contact Message - FKC Institute*%0A%0A` +
+        `*New Contact Message - IKC Institute*%0A%0A` +
         `*Name:* ${name}%0A` +
         `*Phone:* ${phone}%0A` +
         `*Email:* ${email}%0A` +
         `*Message:* ${message}`
       );
-      window.open(`https://wa.me/923313498008?text=${text}`, '_blank');
+      window.open(`https://wa.me/923362506588?text=${text}`, '_blank');
 
       const successMsg = document.getElementById('contactSuccess');
       if (successMsg) {
@@ -195,13 +195,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const pass = document.getElementById('adminPass').value;
       
       // Demo credentials
-      if (user === 'admin' && pass === 'fkc2026') {
+      if (user === 'admin' && pass === 'ikc2026') {
         window.location.href = 'dashboard.html';
       } else {
         const err = document.getElementById('loginError');
         if (err) {
           err.style.display = 'block';
-          err.textContent = 'Invalid username or password. Try admin / fkc2026';
+          err.textContent = 'Invalid username or password. Try admin / ikc2026';
         }
       }
     });
