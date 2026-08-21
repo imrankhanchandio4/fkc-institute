@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin Dashboard | FKC Institute of Computer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-logo">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">FKC</div>
+          <span>Admin Panel</span>
+        </a>
+      </div>
+      <nav class="admin-nav">
+        <a href="dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="#students"><i class="fas fa-user-graduate"></i> Students</a>
+        <a href="#courses"><i class="fas fa-book"></i> Courses</a>
+        <a href="#admissions"><i class="fas fa-file-alt"></i> Admissions</a>
+        <a href="#announcements"><i class="fas fa-bullhorn"></i> Announcements</a>
+        <a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+        <a href="#contact"><i class="fas fa-address-book"></i> Contact Info</a>
+        <a href="../index.html"><i class="fas fa-globe"></i> View Website</a>
+        <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h3 style="font-size:1.2rem;margin:0;">Dashboard Overview</h3>
+          <p style="font-size:0.85rem;color:var(--gray);margin:0;">Welcome back, Administrator</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <span style="font-size:0.9rem;color:var(--gray);"><i class="fas fa-shield-alt" style="color:var(--success);"></i> Secure Session</span>
+          <div style="width:40px;height:40px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;">A</div>
+        </div>
+      </header>
+
+      <div class="admin-content">
+        <!-- Stats Cards -->
+        <div class="admin-cards">
+          <div class="admin-card">
+            <div class="admin-card-icon blue"><i class="fas fa-user-graduate"></i></div>
+            <div>
+              <h3>1,248</h3>
+              <p>Total Students</p>
+            </div>
+          </div>
+          <div class="admin-card">
+            <div class="admin-card-icon green"><i class="fas fa-book-open"></i></div>
+            <div>
+              <h3>18</h3>
+              <p>Active Courses</p>
+            </div>
+          </div>
+          <div class="admin-card">
+            <div class="admin-card-icon orange"><i class="fas fa-file-signature"></i></div>
+            <div>
+              <h3>47</h3>
+              <p>Pending Admissions</p>
+            </div>
+          </div>
+          <div class="admin-card">
+            <div class="admin-card-icon purple"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h3>892</h3>
+              <p>Certificates Issued</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Admissions Table -->
+        <div class="admin-table" id="admissions">
+          <div class="admin-table-header">
+            <h3 style="font-size:1.1rem;margin:0;">Recent Admission Applications</h3>
+            <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Add New</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Student Name</th>
+                <th>Course</th>
+                <th>Contact</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ali Hassan</td>
+                <td>Web Development</td>
+                <td>0300-1234567</td>
+                <td>Aug 20, 2026</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">View</button></td>
+              </tr>
+              <tr>
+                <td>Fatima Zahra</td>
+                <td>Graphic Designing</td>
+                <td>0321-9876543</td>
+                <td>Aug 19, 2026</td>
+                <td><span class="badge badge-success">Approved</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">View</button></td>
+              </tr>
+              <tr>
+                <td>Usman Khan</td>
+                <td>MS Office Suite</td>
+                <td>0333-5556677</td>
+                <td>Aug 18, 2026</td>
+                <td><span class="badge badge-success">Approved</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">View</button></td>
+              </tr>
+              <tr>
+                <td>Ayesha Bibi</td>
+                <td>Computer Basics</td>
+                <td>0345-1122334</td>
+                <td>Aug 17, 2026</td>
+                <td><span class="badge badge-info">Contacted</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">View</button></td>
+              </tr>
+              <tr>
+                <td>Bilal Ahmed</td>
+                <td>Programming</td>
+                <td>0312-4455667</td>
+                <td>Aug 16, 2026</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">View</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Courses Management -->
+        <div class="admin-table" id="courses" style="margin-top:2rem;">
+          <div class="admin-table-header">
+            <h3 style="font-size:1.1rem;margin:0;">Manage Courses</h3>
+            <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Add Course</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Course Name</th>
+                <th>Duration</th>
+                <th>Students</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Computer Basics</td>
+                <td>2 Months</td>
+                <td>156</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
+              </tr>
+              <tr>
+                <td>MS Office Suite</td>
+                <td>3 Months</td>
+                <td>210</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Graphic Designing</td>
+                <td>4 Months</td>
+                <td>98</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Web Development</td>
+                <td>5 Months</td>
+                <td>124</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Programming</td>
+                <td>6 Months</td>
+                <td>87</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Announcements -->
+        <div class="admin-table" id="announcements" style="margin-top:2rem;">
+          <div class="admin-table-header">
+            <h3 style="font-size:1.1rem;margin:0;">Announcements</h3>
+            <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> New Announcement</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>New Batch for Web Development Starting Soon</td>
+                <td>Aug 15, 2026</td>
+                <td><span class="badge badge-success">Published</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Certificate Distribution Ceremony</td>
+                <td>Aug 10, 2026</td>
+                <td><span class="badge badge-success">Published</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Lab Upgrade Completed</td>
+                <td>Aug 05, 2026</td>
+                <td><span class="badge badge-success">Published</span></td>
+                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Quick Actions -->
+        <div style="margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+          <div class="feature-card" style="text-align:center;cursor:pointer;">
+            <div class="feature-icon" style="margin:0 auto 1rem;"><i class="fas fa-images"></i></div>
+            <h3 style="font-size:1rem;">Manage Gallery</h3>
+            <p style="font-size:0.85rem;">Upload & organize images</p>
+          </div>
+          <div class="feature-card" style="text-align:center;cursor:pointer;">
+            <div class="feature-icon" style="margin:0 auto 1rem;"><i class="fas fa-address-book"></i></div>
+            <h3 style="font-size:1rem;">Contact Settings</h3>
+            <p style="font-size:0.85rem;">Update phone, email, address</p>
+          </div>
+          <div class="feature-card" style="text-align:center;cursor:pointer;">
+            <div class="feature-icon" style="margin:0 auto 1rem;"><i class="fas fa-users"></i></div>
+            <h3 style="font-size:1rem;">Student Records</h3>
+            <p style="font-size:0.85rem;">View & manage students</p>
+          </div>
+          <div class="feature-card" style="text-align:center;cursor:pointer;">
+            <div class="feature-icon" style="margin:0 auto 1rem;"><i class="fas fa-cog"></i></div>
+            <h3 style="font-size:1rem;">Settings</h3>
+            <p style="font-size:0.85rem;">Institute preferences</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
