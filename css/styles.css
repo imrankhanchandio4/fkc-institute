@@ -113,7 +113,7 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 3.5rem 0;
 }
 
 .section-alt {
@@ -288,13 +288,14 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
 /* ========== HERO ========== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #062A66 0%, #0B3D91 40%, #1E5BB8 100%);
   color: var(--white);
   overflow: hidden;
   padding-top: 72px;
+  padding-bottom: 3rem;
 }
 
 .hero::before {
@@ -375,7 +376,7 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
 /* ========== STATS ========== */
 .stats {
   background: var(--white);
-  margin-top: -50px;
+  margin-top: -40px;
   position: relative;
   z-index: 10;
   border-radius: var(--radius);
@@ -1277,3 +1278,20 @@ textarea.form-control {
 .mt-2 { margin-top: 2rem; }
 .mb-2 { margin-bottom: 2rem; }
 .hidden { display: none; }
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 2rem;
+  }
+  .hero-image img {
+    height: 220px;
+  }
+  .section {
+    padding: 2.5rem 0;
+  }
+  .stats {
+    margin-top: -20px;
+  }
+}
+
