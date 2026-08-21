@@ -48,192 +48,86 @@
       </header>
 
       <div class="admin-content">
-        <!-- Stats Cards -->
+        <!-- Stats Cards - Zero / Empty -->
         <div class="admin-cards">
           <div class="admin-card">
             <div class="admin-card-icon blue"><i class="fas fa-user-graduate"></i></div>
             <div>
-              <h3>1,248</h3>
+              <h3>0</h3>
               <p>Total Students</p>
             </div>
           </div>
           <div class="admin-card">
             <div class="admin-card-icon green"><i class="fas fa-book-open"></i></div>
             <div>
-              <h3>18</h3>
+              <h3>0</h3>
               <p>Active Courses</p>
             </div>
           </div>
           <div class="admin-card">
             <div class="admin-card-icon orange"><i class="fas fa-file-signature"></i></div>
             <div>
-              <h3>47</h3>
+              <h3>0</h3>
               <p>Pending Admissions</p>
             </div>
           </div>
           <div class="admin-card">
             <div class="admin-card-icon purple"><i class="fas fa-certificate"></i></div>
             <div>
-              <h3>892</h3>
+              <h3>0</h3>
               <p>Certificates Issued</p>
             </div>
           </div>
         </div>
 
-        <!-- Recent Admissions Table -->
+        <!-- Admissions - Empty -->
         <div class="admin-table" id="admissions">
           <div class="admin-table-header">
-            <h3 style="font-size:1.1rem;margin:0;">Recent Admission Applications</h3>
+            <h3 style="font-size:1.1rem;margin:0;">Admission Applications</h3>
             <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Add New</button>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Student Name</th>
-                <th>Course</th>
-                <th>Contact</th>
-                <th>Date</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Ali Hassan</td>
-                <td>Web Development</td>
-                <td>0331-3498008</td>
-                <td>Aug 20, 2026</td>
-                <td><span class="badge badge-warning">Pending</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">View</button></td>
-              </tr>
-              <tr>
-                <td>Fatima Zahra</td>
-                <td>Graphic Designing</td>
-                <td>0321-9876543</td>
-                <td>Aug 19, 2026</td>
-                <td><span class="badge badge-success">Approved</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">View</button></td>
-              </tr>
-              <tr>
-                <td>Usman Khan</td>
-                <td>MS Office Suite</td>
-                <td>0333-5556677</td>
-                <td>Aug 18, 2026</td>
-                <td><span class="badge badge-success">Approved</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">View</button></td>
-              </tr>
-              <tr>
-                <td>Ayesha Bibi</td>
-                <td>Computer Basics</td>
-                <td>0345-1122334</td>
-                <td>Aug 17, 2026</td>
-                <td><span class="badge badge-info">Contacted</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">View</button></td>
-              </tr>
-              <tr>
-                <td>Bilal Ahmed</td>
-                <td>Programming</td>
-                <td>0312-4455667</td>
-                <td>Aug 16, 2026</td>
-                <td><span class="badge badge-warning">Pending</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">View</button></td>
-              </tr>
-            </tbody>
-          </table>
+          <div style="padding:3rem 1.5rem;text-align:center;color:var(--gray);">
+            <i class="fas fa-inbox" style="font-size:2.5rem;margin-bottom:1rem;opacity:0.4;"></i>
+            <p style="margin:0;font-size:0.95rem;">No admission applications yet.</p>
+            <p style="margin:0.5rem 0 0;font-size:0.85rem;opacity:0.8;">New applications will appear here when students apply via WhatsApp.</p>
+          </div>
         </div>
 
-        <!-- Courses Management -->
+        <!-- Courses - Empty -->
         <div class="admin-table" id="courses" style="margin-top:2rem;">
           <div class="admin-table-header">
             <h3 style="font-size:1.1rem;margin:0;">Manage Courses</h3>
             <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Add Course</button>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Course Name</th>
-                <th>Duration</th>
-                <th>Students</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Computer Basics</td>
-                <td>2 Months</td>
-                <td>156</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
-              </tr>
-              <tr>
-                <td>MS Office Suite</td>
-                <td>3 Months</td>
-                <td>210</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
-              </tr>
-              <tr>
-                <td>Graphic Designing</td>
-                <td>4 Months</td>
-                <td>98</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
-              </tr>
-              <tr>
-                <td>Web Development</td>
-                <td>5 Months</td>
-                <td>124</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
-              </tr>
-              <tr>
-                <td>Programming</td>
-                <td>6 Months</td>
-                <td>87</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
-              </tr>
-            </tbody>
-          </table>
+          <div style="padding:3rem 1.5rem;text-align:center;color:var(--gray);">
+            <i class="fas fa-book" style="font-size:2.5rem;margin-bottom:1rem;opacity:0.4;"></i>
+            <p style="margin:0;font-size:0.95rem;">No courses added yet.</p>
+            <p style="margin:0.5rem 0 0;font-size:0.85rem;opacity:0.8;">Click "Add Course" to create your first course.</p>
+          </div>
         </div>
 
-        <!-- Announcements -->
+        <!-- Students - Empty -->
+        <div class="admin-table" id="students" style="margin-top:2rem;">
+          <div class="admin-table-header">
+            <h3 style="font-size:1.1rem;margin:0;">Students</h3>
+            <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Add Student</button>
+          </div>
+          <div style="padding:3rem 1.5rem;text-align:center;color:var(--gray);">
+            <i class="fas fa-user-graduate" style="font-size:2.5rem;margin-bottom:1rem;opacity:0.4;"></i>
+            <p style="margin:0;font-size:0.95rem;">No students registered yet.</p>
+          </div>
+        </div>
+
+        <!-- Announcements - Empty -->
         <div class="admin-table" id="announcements" style="margin-top:2rem;">
           <div class="admin-table-header">
             <h3 style="font-size:1.1rem;margin:0;">Announcements</h3>
             <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> New Announcement</button>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Date</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>New Batch for Web Development Starting Soon</td>
-                <td>Aug 15, 2026</td>
-                <td><span class="badge badge-success">Published</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
-              </tr>
-              <tr>
-                <td>Certificate Distribution Ceremony</td>
-                <td>Aug 10, 2026</td>
-                <td><span class="badge badge-success">Published</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
-              </tr>
-              <tr>
-                <td>Lab Upgrade Completed</td>
-                <td>Aug 05, 2026</td>
-                <td><span class="badge badge-success">Published</span></td>
-                <td><button class="btn btn-sm" style="background:var(--gray-light);">Edit</button></td>
-              </tr>
-            </tbody>
-          </table>
+          <div style="padding:3rem 1.5rem;text-align:center;color:var(--gray);">
+            <i class="fas fa-bullhorn" style="font-size:2.5rem;margin-bottom:1rem;opacity:0.4;"></i>
+            <p style="margin:0;font-size:0.95rem;">No announcements yet.</p>
+          </div>
         </div>
 
         <!-- Quick Actions -->
@@ -259,6 +153,11 @@
             <p style="font-size:0.85rem;">Institute preferences</p>
           </div>
         </div>
+
+        <p style="margin-top:2rem;text-align:center;font-size:0.85rem;color:var(--gray);">
+          <i class="fas fa-info-circle"></i> Note: Admission forms currently send data to WhatsApp (+92 331 3498008). 
+          This dashboard is ready for future backend integration.
+        </p>
       </div>
     </div>
   </div>
