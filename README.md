@@ -1,6 +1,6 @@
-# FKC Institute of Computer – Website
+# IKC Institute of Computer – Website
 
-A modern, fully responsive, professional website for **FKC Institute of Computer**.
+A modern, fully responsive, professional website for **IKC Institute of Computer**.
 
 ## Features
 
@@ -25,7 +25,7 @@ A modern, fully responsive, professional website for **FKC Institute of Computer
 
 ```bash
 # Using Python
-cd fkc-institute
+cd ikc-institute
 python -m http.server 8080
 
 # Then visit: http://localhost:8080
@@ -36,12 +36,12 @@ python -m http.server 8080
 - URL: `/admin/` or `admin/index.html`
 - **Demo credentials**:
   - Username: `admin`
-  - Password: `fkc2026`
+  - Password: `ikc2026`
 
 ## File Structure
 
 ```
-fkc-institute/
+ikc-institute/
 ├── index.html          # Home
 ├── about.html
 ├── courses.html
@@ -68,4 +68,4 @@ fkc-institute/
 
 ---
 
-© 2026 FKC Institute of Computer
+© 2026 IKC Institute of Computer
