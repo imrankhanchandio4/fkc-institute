@@ -62,45 +62,76 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // Admission form handling
+  // Admission form handling — sends details via WhatsApp (real working method)
   const admissionForm = document.getElementById('admissionForm');
   if (admissionForm) {
     admissionForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
       const formData = new FormData(admissionForm);
-      const name = formData.get('studentName');
-      
+      const name = formData.get('studentName') || '';
+      const father = formData.get('fatherName') || '';
+      const contact = formData.get('contactNumber') || '';
+      const email = formData.get('email') || 'N/A';
+      const course = formData.get('course') || '';
+      const batch = formData.get('batch') || 'Not specified';
+      const address = formData.get('address') || '';
+      const message = formData.get('message') || 'None';
+
+      // Build WhatsApp message
+      const text = encodeURIComponent(
+        `*New Admission Application - FKC Institute*%0A%0A` +
+        `*Student Name:* ${name}%0A` +
+        `*Father Name:* ${father}%0A` +
+        `*Contact:* ${contact}%0A` +
+        `*Email:* ${email}%0A` +
+        `*Course:* ${course}%0A` +
+        `*Batch:* ${batch}%0A` +
+        `*Address:* ${address}%0A` +
+        `*Message:* ${message}`
+      );
+
+      // Open WhatsApp with pre-filled form data
+      window.open(`https://wa.me/923313498008?text=${text}`, '_blank');
+
       // Show success message
       const successMsg = document.getElementById('formSuccess');
       if (successMsg) {
         successMsg.style.display = 'block';
-        successMsg.innerHTML = `<strong>Thank you, ${name}!</strong> Your admission application has been submitted successfully. Our team will contact you shortly.`;
+        successMsg.innerHTML = `<strong>Shukriya, ${name}!</strong> Aapka form WhatsApp pe bhej diya gaya hai. Hum jald contact karenge.`;
         admissionForm.reset();
-        
-        // Scroll to message
         successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        // Hide after 8 seconds
-        setTimeout(() => {
-          successMsg.style.display = 'none';
-        }, 8000);
+        setTimeout(() => { successMsg.style.display = 'none'; }, 10000);
       }
     });
   }
 
-  // Contact form handling
+  // Contact form handling — sends via WhatsApp
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const formData = new FormData(contactForm);
+      const name = formData.get('name') || '';
+      const phone = formData.get('phone') || '';
+      const email = formData.get('email') || 'N/A';
+      const message = formData.get('message') || '';
+
+      const text = encodeURIComponent(
+        `*New Contact Message - FKC Institute*%0A%0A` +
+        `*Name:* ${name}%0A` +
+        `*Phone:* ${phone}%0A` +
+        `*Email:* ${email}%0A` +
+        `*Message:* ${message}`
+      );
+      window.open(`https://wa.me/923313498008?text=${text}`, '_blank');
+
       const successMsg = document.getElementById('contactSuccess');
       if (successMsg) {
         successMsg.style.display = 'block';
+        successMsg.innerHTML = 'Message WhatsApp pe bhej diya gaya hai. Shukriya!';
         contactForm.reset();
-        setTimeout(() => {
-          successMsg.style.display = 'none';
-        }, 6000);
+        setTimeout(() => { successMsg.style.display = 'none'; }, 8000);
       }
     });
   }
